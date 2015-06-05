@@ -1,0 +1,40 @@
+
+<div id="leaderboard-widget" class="panel panel-primary  {{ klass }}">
+	<div class="panel-heading">
+		<h2 class="panel-title">Leaderboard</h2>
+	</div>
+	<div class="panel-body">
+		<div id="leaderboard-list">
+			<!--  -->
+			<table class="table  table-striped">
+				<thead class="bg-primary">
+					<tr>
+						<th>User</th>
+						<th>Runs</th>
+						<th>Application</th>
+						
+						
+					</tr>
+				</thead>
+				{% for stat in stats %}
+				<tbody>
+					<tr>
+						<td>{{ stat.user }}</td>
+						<td>{{ stat.run_count}}</td>	
+						<td>{{ stat.application }}</td>
+						
+						
+					</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>
+<style>
+.leaderboard-home {
+
+margin-top: 20px;
+
+}
+</style>

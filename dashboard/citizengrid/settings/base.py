@@ -27,9 +27,10 @@ ADMINS = (
     ('admin', 'admin@localhost'),
 )
 
-EMAIL_HOST = 'automail.cc.ic.ac.uk'
-EMAIL_PORT = 25
-EMAIL_USE_SSL = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = '1025'
+EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'Poonam Yadav <p.yadav@imperial.ac.uk>'
 DEFAULT_INDEX_TABLESPACE = ' '
 DEFAULT_TABLESPACE = ''
